@@ -6,6 +6,11 @@ const geocodeUtil = require("./utils/geocode")
 const forecastUtil = require("./utils/forecast")
 
 
+//For Heroku deployment
+//read Heroku port using process.env.PORT
+const port = process.env.PORT || 3000  //we added "|| 3000" in case running locally and process.env.PORT is not exist
+
+
 //initiate the server
 const app = express(); 
 
@@ -106,7 +111,7 @@ app.get ("*", function (req, res){ //general error page route; match anything th
 });
 
 //start the server
-app.listen(3000, function(){
-    console.log("Server is up on port 3000");
+app.listen(port, function(){
+    console.log("Server is up on port " + port);
 });
 
