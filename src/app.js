@@ -27,7 +27,7 @@ app.get("", function (req, res){ //path is empty string which means the root rou
     { // this is the data to be passed to the view
         title: "Weather App",
         message: "This is Index page",
-        name: "Adham Suwan @ Index"
+        name: "Adham Suwan @ Index" 
     }); 
 });
 app.get("/help", function (req, res){ //help page route
