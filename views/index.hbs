@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="./css/style.css">
+       
+    </head>
+    <body>
+        <div class="main-content">
+
+            {{!-- Use the partial view (header.hbs) --}}
+            {{>header}} 
+
+            {{!-- Will render the data passed from the backend--}}
+            <p>{{message}}</p>
+
+
+            <form>
+                <input placeholder="Location">
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+
+        {{!-- Use the partial view (footer.hbs) --}}
+        {{>footer}}
+
+         <script src="./js/app.js"></script> {{!-- We load the javascript after all elements above are loaded --}}
+    
+    </body>
+</html>
