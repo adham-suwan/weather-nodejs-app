@@ -7,7 +7,7 @@ const forecastUtil = require("./utils/forecast")
 
 
 //initiate the server
-const app = express();
+const app = express(); 
 
 
 //load the static assets
