@@ -38,3 +38,8 @@ this will tell Heroku how to start your NodeJS app, assuming that src/app.js is 
 8) push your code to Heroku repo, by running the command: git push heroku master
 9) once pushing the code to Heroku, it will be deployed and give you the production link
 10) repeat steps 7&8 whenever you make changes and want to deploy them
+
+
+General notes:
+1) add ("dev" : "nodemon src/app.js -e js,hbs") to the scripts in package.json file to start the local server automatically using (npm run dev) command in terminal
+2) if you have a global package that you are using in local machine for development (e.g. nodemon), don't install it globally, install it using (npm install nodemon --save-dev) command, this will add the package as dev dependency that will not be installed on production enviroment (e.g. on heroku)
