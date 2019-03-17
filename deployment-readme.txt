@@ -33,6 +33,8 @@ Heroku:
 "start": "node src/app.js"
 this will tell Heroku how to start your NodeJS app, assuming that src/app.js is the main app code
 5) in the main app code (src/app.js), define Express port to be process.env.PORT, this will enable the app to read Heroku port and make Express listen to it
-6) to make sure that you connected to both Heroku and Git repos run command: git remote
-7) to push your code to Heroku repo, run the command: git push heroku master
-8) once pushing the code to Heroku, it will deploy and give you the production link
+6) to make sure that you connected to both Heroku and Github repos run command: git remote. You should get "heroku" and "origin" printed
+7) push your latest code to Github
+8) push your code to Heroku repo, by running the command: git push heroku master
+9) once pushing the code to Heroku, it will be deployed and give you the production link
+10) repeat steps 7&8 whenever you make changes and want to deploy them

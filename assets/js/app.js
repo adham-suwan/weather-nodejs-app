@@ -33,7 +33,7 @@ weatherForm.addEventListener("submit", function(event){
         }
         else{
             messageOne.textContent = data.location;
-            messageTwo.textContent = data.forecast.degrees + " degrees. " + data.forecast.summary + " Rain change is " + data.forecast.rainProb;
+            messageTwo.textContent = data.forecast.degrees + " degrees. " + data.forecast.summary + " Rain change is " + data.forecast.rainProb + ". Wind speed is " + data.forecast.windSpeed;
         }
     });
 });

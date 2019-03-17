@@ -15,12 +15,15 @@ function forecast (latitude, longitude, callbackFunc){
 
         var degreesValue = response.body.currently.temperature;
         var rainProbValue = response.body.currently.precipProbability;
+        var windSpeedValue = response.body.currently.windSpeed
         var summaryValue = response.body.daily.data[0].summary;
+        
 
         callbackFunc (undefined, {
             degrees: degreesValue,
             rainProb: rainProbValue,
-            summary: summaryValue
+            summary: summaryValue,
+            windSpeed: windSpeedValue
         });
         }
 
