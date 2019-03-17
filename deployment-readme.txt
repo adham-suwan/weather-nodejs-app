@@ -4,7 +4,7 @@ GitHub:
 
 
 Heroku:
-1) install heroku CLI
+1) install Heroku CLI
 2) from cmd (or VS Code terminal) run the command: heroku login
 3) the above command will redirect you to heroku login page to login with your account
 
@@ -29,5 +29,10 @@ Heroku:
 1) from cmd (or VS Code terminal) run the command: heroku keys:add
 2) the above command will automaticlly detect your local public key and ask to add it to your heroku account
 3) once the key added, run the command: heroku create my-app-name
-
-
+4) in the project files, add the below to "scripts" in package.json file
+"start": "node src/app.js"
+this will tell Heroku how to start your NodeJS app, assuming that src/app.js is the main app code
+5) in the main app code (src/app.js), define Express port to be process.env.PORT, this will enable the app to read Heroku port and make Express listen to it
+6) to make sure that you connected to both Heroku and Git repos run command: git remote
+7) to push your code to Heroku repo, run the command: git push heroku master
+8) once pushing the code to Heroku, it will deploy and give you the production link
